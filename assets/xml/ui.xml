@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vbox id="main">
+	<style source="../css/main.css" />
+	<hbox>
+		<button id="c1" text="Class 1" />
+		<button id="c2" text="Class 1" />
+		<button id="c3" text="Class 1" />
+	</hbox>
+	<vbox id="container" />
+</vbox>
