@@ -32,8 +32,6 @@ class UI2Data {
 				case _:
 					Reflect.setProperty( dataContainer, fieldData.name, value );
 			}
-			//} else {
-			//trace( 'Error retrieving value for ${fieldData.name}' );
 		}
 		return dataContainer;
 	}
