@@ -1,9 +1,6 @@
 package data;
 
-/**
- * ...
- * @author Urs Stutz
- */
+
 class Data {
 	
 	public var id:Int;

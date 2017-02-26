@@ -1,17 +1,13 @@
 package data;
 import data.Data;
 
-/**
- * ...
- * @author Urs Stutz
- */
 enum Choices {
 	First;
 	Second;
 	Third;
 }
  
-class DataAllTypes  extends Data {
+class DataAllTypes extends Data {
 	
 	public var isYesOrNo:Bool;
 	public var number:Float;

@@ -1,9 +1,5 @@
 package data;
 
-/**
- * ...
- * @author Urs Stutz
- */
 class DataString extends Data {
 	
 	public var text1:String;

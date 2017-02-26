@@ -2,9 +2,10 @@
 <vbox id="main">
 	<style source="../css/main.css" />
 	<hbox>
-		<button id="c1" text="Class 1" />
-		<button id="c2" text="Class 1" />
-		<button id="c3" text="Class 1" />
+		<label text="Generated UI" />
 	</hbox>
-	<vbox id="container" />
+	<grid id="container" columns="2" />
+	<hbox>
+		<button id="ok" text="ok" />
+	</hbox>
 </vbox>
