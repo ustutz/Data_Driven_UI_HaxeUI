@@ -15,7 +15,6 @@ typedef ListViewItem = {
 	var id:Int;
 }
 
- 
 class Data2UIData {
 
 	public static function createFieldDatasets<T>( data:T ):Array<FieldData> {
@@ -28,7 +27,7 @@ class Data2UIData {
 		for ( field in fields ) {
 			
 			var value:Dynamic = Reflect.getProperty( data, field );
-			var labelElement = createLabel( field );
+			var labelElement = createLabel( field ); if( Type.typeof( value ) != TFunction ) trace( 'field: $field' );
 			
 			switch( Type.typeof( value )) {
 			
@@ -94,6 +93,8 @@ class Data2UIData {
 			}
 			dropdown.dataSource.add( optionItem );
 		}
+		
+		dropdown.selectedIndex = defaultIndex;
 		
 		return dropdown;
 	}

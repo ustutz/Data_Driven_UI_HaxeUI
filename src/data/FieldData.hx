@@ -4,7 +4,6 @@ import haxe.ui.components.Label;
 import haxe.ui.components.TextField;
 import haxe.ui.core.Component;
 
-
 class FieldData {
 	
 	public var name:String;

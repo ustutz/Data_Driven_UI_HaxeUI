@@ -1,6 +1,5 @@
 package data;
 
-
 class Selection {
 	
 	public var options:Array<String>;
@@ -11,4 +10,7 @@ class Selection {
 		this.index = index;
 	}
 	
+	public function toString():String {
+		return index < options.length ? options[index] : "-1";
+	}
 }

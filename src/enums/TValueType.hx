@@ -1,6 +1,5 @@
 package enums;
 
-
 enum TValueType {
 	TBool;
 	TEnum;

@@ -8,7 +8,6 @@ import haxe.ui.components.DropDown;
 import haxe.ui.components.TextField;
 import haxe.ui.core.Component;
 
-
 class UI2Data {
 
 	public static function retrieve( dataContainer:Data, fieldDatasets:Array<FieldData> ):Data {

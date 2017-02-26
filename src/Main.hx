@@ -18,7 +18,6 @@ import haxe.ui.macros.ComponentMacros;
 import openfl.display.Sprite;
 import openfl.Lib;
 
-
 class Main extends Sprite {
 
 	var ui:Component;
@@ -69,7 +68,7 @@ class Main extends Sprite {
 	function onClick( e:MouseEvent ) {
 		
 		var retrievedData = UI2Data.retrieve( usedData, fieldDatasets );
-		trace( Json.stringify( retrievedData ));
+		trace( retrievedData );
 	}
 
 }

@@ -33,4 +33,16 @@ class DataAllTypes extends Data {
 	override public function copy():DataAllTypes {
 		return new DataAllTypes( id, isYesOrNo, number, amount, someText, choice, selection,onlyOneSelection );
 	}
+	
+	override public function toString():String {
+		
+		return 	super.toString() 
+				+ " isYesOrNo: " + Std.string( isYesOrNo )
+				+ " number: " + Std.string( number )
+				+ " amount: " + Std.string( amount )
+				+ " someText: " + Std.string( someText )
+				+ " choice: " + Std.string( choice )
+				+ " selection: " + Std.string( selection )
+				+ " onlyOneSelection: " + Std.string( onlyOneSelection );
+	}
 }

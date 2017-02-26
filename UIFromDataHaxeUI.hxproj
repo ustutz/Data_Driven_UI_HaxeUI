@@ -23,16 +23,16 @@
     <class path="src" />
     <class path="D:\Programs\Coding\HaxeToolkit\haxelib\openfl\4,8,1\externs\core\openfl" />
     <class path="D:\Programs\Coding\HaxeToolkit\haxelib\openfl\4,8,1\externs\extras" />
-    <class path="bin\flash\debug\haxe" />
+    <class path="bin\windows\neko\debug\haxe" />
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="openfl=4.8.1&#xA;lime=3.7.4&#xA;haxeui-core=0.0.0&#xA;haxeui-openfl=0.0.0&#xA;tools=3.7.4&#xA;no-compilation&#xA;openfl-flash&#xA;web&#xA;display" />
+    <option directives="openfl=4.8.1&#xA;lime=3.7.4&#xA;haxeui-core=0.0.0&#xA;haxeui-openfl=0.0.0&#xA;tools=3.7.4&#xA;no-compilation&#xA;native&#xA;lime-native&#xA;lime-vorbis&#xA;openfl-native&#xA;lime-cffi&#xA;windows&#xA;desktop&#xA;display" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="True" />
-    <option additional="--macro openfl._internal.utils.ExtraParams.include()&#xA;--macro lime.Lib.extraParams()&#xA;-swf-version 11.2&#xA;-debug " />
+    <option additional="--macro openfl._internal.utils.ExtraParams.include()&#xA;--macro lime.Lib.extraParams()&#xA;--remap flash:openfl&#xA;-debug " />
   </build>
   <!-- haxelib libraries -->
   <haxelib>
