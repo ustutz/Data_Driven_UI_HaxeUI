@@ -6,7 +6,7 @@
 	<meta title="HaxeUI2" package="HaxeUI2" version="1.0.0" company="Urs Stutz" />
 	
 	<!-- output -->
-	<app main="Main" file="HaxeUI2" path="bin" />
+	<app main="ddui.Main" file="HaxeUI2" path="bin" />
 	
 	<window background="#000000" fps="60" />
 	<window width="800" height="480" unless="mobile" />

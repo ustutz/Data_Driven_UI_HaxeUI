@@ -1,19 +1,14 @@
-package contexts;
-import contexts.UI2Data;
-import data.Data;
-import data.FieldData;
-import data.Selection;
-import enums.TValueType;
+package ddui.contexts;
+import ddui.contexts.UI2Data;
+import ddui.data.Data;
+import ddui.data.FieldData;
+import ddui.data.Selection;
+import ddui.enums.TValueType;
 import haxe.ui.components.CheckBox;
 import haxe.ui.components.DropDown;
 import haxe.ui.components.Label;
 import haxe.ui.components.TextField;
 import haxe.ui.data.ArrayDataSource;
-
-typedef ListViewItem = {
-	var value:String;
-	var id:Int;
-}
 
 class Data2UIData {
 

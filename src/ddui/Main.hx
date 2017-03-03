@@ -1,13 +1,9 @@
-package;
+package ddui;
 
-import contexts.CreateUI;
-import contexts.Data2UIData;
-import contexts.UI2Data;
-import data.DataAllTypes;
-import data.DataString;
-import data.FieldData;
-import data.Selection;
-import haxe.Json;
+import ddui.data.DataAllTypes;
+import ddui.data.NestedData;
+import ddui.data.Selection;
+import ddui.data.UIData;
 import haxe.ui.Toolkit;
 import haxe.ui.components.Button;
 import haxe.ui.containers.Grid;
@@ -22,11 +18,9 @@ class Main extends Sprite {
 
 	var ui:Component;
 	
-	var data1:DataAllTypes;
-	var data2:DataString;
+	static var testData:DataAllTypes;
 	
-	var usedData:Dynamic;
-	var fieldDatasets:Array<FieldData>;
+	static private var uiData:UIData;
 	
 	public function new() {
 		
@@ -43,32 +37,32 @@ class Main extends Sprite {
 		
 		var container = ui.findComponent( "container", Grid );
 		var ok = ui.findComponent( "ok", Button );
+		ok.registerEvent( MouseEvent.CLICK, onClick );
 		
-		data1 = new DataAllTypes( 	0, 
+		testData = new DataAllTypes( 	0, 
 									true, 
 									0.12, 
 									4, 
 									"Random Text", 
 									Choices.Second, 
 									new Selection( ["Same as Input Series", "1", "2"] ), 
-									new Selection( ["Input Series"]
-								));
+									new Selection( ["Input Series"] ),
+									new NestedData( false, 5 )
+								);
 								
-		data2 = new DataString( 1, "Some Text", "More Text", "and another one" );
+		uiData = new UIData( testData );
+		uiData.init();
 		
-		usedData = data1;
-		
-		fieldDatasets = Data2UIData.createFieldDatasets( usedData ); trace( fieldDatasets );
-		CreateUI.create( container, fieldDatasets );
-		
-		ok.registerEvent( MouseEvent.CLICK, onClick );
-
+		for ( component in uiData.components ) {
+			container.addComponent( component );
+		}
 	}
 
 	function onClick( e:MouseEvent ) {
 		
-		var retrievedData = UI2Data.retrieve( usedData, fieldDatasets );
-		trace( retrievedData );
+		uiData.ui2Data();
+		
+		trace( testData );
 	}
 
 }

@@ -1,4 +1,4 @@
-package data;
+package ddui.data;
 
 class DataString extends Data {
 	

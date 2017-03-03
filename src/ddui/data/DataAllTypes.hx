@@ -1,5 +1,5 @@
-package data;
-import data.Data;
+package ddui.data;
+import ddui.data.Data;
 
 enum Choices {
 	First;
@@ -7,7 +7,7 @@ enum Choices {
 	Third;
 }
  
-class DataAllTypes extends Data {
+class DataAllTypes  extends Data {
 	
 	public var isYesOrNo:Bool;
 	public var number:Float;
@@ -16,8 +16,9 @@ class DataAllTypes extends Data {
 	public var choice:Choices;
 	public var selection:Selection;
 	public var onlyOneSelection:Selection;
+	public var nestedData:NestedData;
 
-	public function new( id:Int, isYesOrNo:Bool, number:Float, amount:Int, someText:String, choice:Choices, selection:Selection, onlyOneSelection:Selection ) {
+	public function new( id:Int, isYesOrNo:Bool, number:Float, amount:Int, someText:String, choice:Choices, selection:Selection, onlyOneSelection:Selection, nestedData:NestedData ) {
 		
 		super( id );
 		
@@ -28,10 +29,11 @@ class DataAllTypes extends Data {
 		this.choice = choice;
 		this.selection = selection;
 		this.onlyOneSelection = onlyOneSelection;
+		this.nestedData = nestedData;
 	}
 	
 	override public function copy():DataAllTypes {
-		return new DataAllTypes( id, isYesOrNo, number, amount, someText, choice, selection,onlyOneSelection );
+		return new DataAllTypes( id, isYesOrNo, number, amount, someText, choice, selection, onlyOneSelection, nestedData );
 	}
 	
 	override public function toString():String {
@@ -43,6 +45,7 @@ class DataAllTypes extends Data {
 				+ " someText: " + Std.string( someText )
 				+ " choice: " + Std.string( choice )
 				+ " selection: " + Std.string( selection )
-				+ " onlyOneSelection: " + Std.string( onlyOneSelection );
+				+ " onlyOneSelection: " + Std.string( onlyOneSelection )
+				+ " nestedData: " + Std.string( nestedData );
 	}
 }

@@ -1,5 +1,5 @@
-package data;
-import enums.TValueType;
+package ddui.data;
+import ddui.enums.TValueType;
 import haxe.ui.components.Label;
 import haxe.ui.components.TextField;
 import haxe.ui.core.Component;

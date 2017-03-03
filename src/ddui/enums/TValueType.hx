@@ -1,4 +1,4 @@
-package enums;
+package ddui.enums;
 
 enum TValueType {
 	TBool;

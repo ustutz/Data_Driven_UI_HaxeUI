@@ -1,8 +1,8 @@
-package contexts;
-import data.Data;
-import data.FieldData;
-import data.Selection;
-import enums.TValueType;
+package ddui.contexts;
+import ddui.data.Data;
+import ddui.data.FieldData;
+import ddui.data.Selection;
+import ddui.enums.TValueType;
 import haxe.ui.components.CheckBox;
 import haxe.ui.components.DropDown;
 import haxe.ui.components.TextField;
